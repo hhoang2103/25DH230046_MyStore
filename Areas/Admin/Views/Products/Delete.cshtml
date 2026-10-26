@@ -1,0 +1,16 @@
+﻿@model MyStore.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2 class="bg-success">Xóa sản phẩm</h2>
+
+<h4 class="bg-danger">Bạn thực sự muốn xóa sản phẩm này à?</h4>
+@Html.Partial("PVProductInfo", Model)
+
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-default" /> |
+    @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary " })
+</div>
+
